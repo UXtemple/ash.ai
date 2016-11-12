@@ -1,0 +1,12 @@
+#!/bin/bash
+
+VERSION=$1
+WWW=/var/www/ash.ai
+
+npm version $VERSION &&
+NODE_ENV=production pacpan bundle &&
+scp bundle/$VERSION/ash.ai-* panels:/var/www/ash.ai &&
+git tag v$VERSION &&
+ssh panels "sed -i 's/ash.ai-\(.*\).js/ash.ai-$VERSION.js/g' $WWW/index.html" &&
+# ssh panels "sed -i 's/ash.ai-\(.*\).js/ash.ai-$VERSION.js/g' $WWW/panels.json" &&
+git checkout package.json

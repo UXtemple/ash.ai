@@ -1,0 +1,18 @@
+{
+  "name": "ash.ai",
+  "main": "index.js",
+  "author": "Dario Javier Cravero <dario@uxtemple.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "bundle": "NODE_ENV=production pacpan bundle",
+    "deploy": "./deploy",
+    "pull": "mkdir -p pages; curl https://package.usepages.today/askash.usepages.com.tar.gz | tar -xz -C pages --strip-components=1",
+    "start": "sudo NODE_ENV=development pacpan start"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "pacpan": "^2.0.0",
+    "panels": "^9.0.0"
+  },
+  "version": "0.0.2"
+}

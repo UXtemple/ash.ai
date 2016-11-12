@@ -1,0 +1,6 @@
+{
+  "logic": "http://ash.ai.dev/app.js",
+  "module": {
+    "name": "ash.ai"
+  }
+}

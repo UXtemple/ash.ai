@@ -1,0 +1,149 @@
+---
+- block: Vertical
+  defaultProps: |
+    "images": [{
+      "url": "https://media0.giphy.com/media/G0vaYbZDJV0cM/giphy.gif",
+      "height": 480,
+      "width": 480
+    },{
+      "url": "https://media0.giphy.com/media/xT8qBm9l6T0jRwTWrC/giphy.gif",
+      "height": 480,
+      "width": 480
+    },{
+      "url": "https://media0.giphy.com/media/VZxIV00dqepFu/giphy.gif",
+      "height": 480,
+      "width": 480
+    },{
+      "url": "https://media0.giphy.com/media/l0LIYv9tJFIVHxF5u/giphy.gif",
+      "height": 480,
+      "width": 480
+    }]
+  
+  style:
+    backgroundColor: white
+    width: {props.width}
+    height: 100%
+    overflowX: hidden
+    overflowY: auto
+    paddingBottom: 100
+  styleBackground: 
+    backgroundImage: url(https://files.usepages.today/askAsh/askAshBack1.jpg)
+  blocks:
+  - block: Horizontal
+    style:
+      height: 450
+    blocks:
+    - block: Image
+      src: {props.images[Math.ceil(Math.random()*100)%props.images.length].url}
+      style:
+        height: 450
+      styleWrapper:
+        width: 100%
+        position: absolute
+    
+    - block: Text
+      style:
+        color: rgba(255,255,255,1)
+        fontFamily: Montserrat, sans-serif
+        fontSize: 200
+        fontWeight: '700'
+        marginTop: 50
+        marginLeft: -35
+        letterSpacing: -10
+        lineHeight: 0.6
+      text: |
+        Ask
+        Ash
+  
+  
+  - block: Text
+    style:
+      fontFamily: Montserrat, sans-serif
+      fontSize: 34
+      marginTop: 50
+      fontWeight: '700'
+      marginLeft: 20
+      marginRight: 30
+      lineHeight: '1.2'
+    text: Your personal design and development mentor, Ash, is always here to guide you...
+  
+  
+  - block: Text
+    style: 
+      marginTop: 20
+      marginLeft: 20
+      fontSize: 12
+      fontFamily: Montserrat, sans-serif
+    text:
+      Coming soon to other platforms. For now Ash is a part of Pages.
+          
+  - block: Horizontal
+    teleportTo: https://usepages.today
+    style: 
+      textDecoration: none
+      justifyContent: center
+      backgroundColor: black
+      paddingTop: 15
+      paddingRight: 15
+      paddingLeft: 15
+      paddingBottom: 15
+      borderRadius: 40
+      width: 150
+      color: white
+      marginLeft: 20
+      fontFamily: Montserrat, sans-serif
+      textTransform: uppercase
+      fontSize: 14
+      fontWeight: 700
+      marginTop: 30
+      transition: all 0.2 ease-in-out
+    styleHover: 
+      backgroundColor: white
+      color: black
+    blocks:
+      - block: Text
+        text:  Use Pages
+  
+  @ - block: Horizontal
+  @   style:
+  @     marginTop: 10
+  @     alignItems: baseline
+  @   blocks:
+  @   - block: Text
+  @     style:
+  @       fontFamily: Roboto Mono, sans-serif
+  @       fontSize: 16
+  @       marginTop: 50
+  @       fontWeight: 700
+  @       marginLeft: 20
+  @       textTransform: uppercase
+  @       lineHeight: '1.4'
+  @     text:  Tom 
+  @   - block: Text
+  @     style:
+  @       fontFamily: Roboto Mono, sans-serif
+  @       fontSize: 14
+  @       marginRight: 30
+  @       marginTop: 50
+  @       color: lightgray
+  @       fontWeight: 300
+  @       marginLeft: 10
+  @       lineHeight: '1.4'
+  @     text: 3sec ago
+    
+  @ - block: Text
+  @   style:
+  @     fontFamily: Roboto Mono, sans-serif
+  @     fontSize: 18
+  @     marginRight: 30
+  @     fontWeight: 300
+  @     marginLeft: 20
+  @     lineHeight: '1.4'
+  @   text:  How to make a menu? 
+
+---
+{
+  "default": {
+    "width": 470
+  }
+}
